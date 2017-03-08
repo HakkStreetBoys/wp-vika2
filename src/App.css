@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tabs__labels {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+}
+
+.tabs__labels a {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  margin-left: 10px;
+  text-decoration : none;
+  color: #000;
+  background: green;
+}
+
+.tabs__labels a div {
+  position: relative;
+  line-height: 60px;
+  margin: auto;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gag {
+  background: #eee;
+}
+
+.item {
+  width: 500px;
+  height: 100%;
+  margin: 15px 1%;
+  text-align: left;
+  border: 5px solid #fff;
+  padding: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info {
+  background: #fff;
+  padding: 20px;
+}
+
+.info h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.info div {
+  margin: 0 auto;
+
+}
+
+.info div p {
+  display: inline-block;
+  width: 50%;
+}
+
+.info div p:last-child {
+  text-align: right;
+}
