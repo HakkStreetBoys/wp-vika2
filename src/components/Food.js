@@ -1,13 +1,23 @@
 import React from 'react';
 
 const Food = ({ food }) => {
-  const { title, image_jpg, image_gif } = food;
+  const { menu_title, menu_image, menu_price, menu_description } = food.acf;
   return (
     <div className="item">
-      <div className="info">
-        <h2>{title}</h2>
+      <div className="item_img">
+        <img src={menu_image.url} alt="" />
       </div>
-      <img src={image_gif} als="" />
+      <div className="info">
+        <h2>{menu_title}</h2>
+      </div>
+      <a href="#" className="item_btn">
+        <div className="item_btn_inner">
+          <ul>
+            <li>Bæta við pöntun</li>
+            <li>{menu_price}</li>
+          </ul>
+        </div>
+      </a>
     </div>
   );
 };

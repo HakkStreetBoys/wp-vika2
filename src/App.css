@@ -1,6 +1,6 @@
-.App {
+/*.App {
   text-align: center;
-}
+}*/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -27,6 +27,8 @@
   display: inline-block;
   width: 100%;
   height: 60px;
+  text-align: center;
+  margin: 40px 0;
 }
 
 .tabs__labels a {
@@ -36,7 +38,15 @@
   margin-left: 10px;
   text-decoration : none;
   color: #000;
-  background: green;
+  padding: 0 40px;
+  font-size: 42px;
+  opacity: .5;
+  font-weight: 700;
+  /*background: green;*/
+}
+
+.tabs__labels .active {
+  opacity: 1;
 }
 
 .tabs__labels a div {
@@ -44,7 +54,7 @@
   line-height: 60px;
   margin: auto;
 }
-
+/*
 .wrapper {
   width: 100%;
   max-width: 90%;
@@ -70,9 +80,10 @@
 
 .item img {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
+  /*height: 200px;
   object-fit: contain;
-}
+}*/
 
 .info {
   background: #fff;
@@ -96,4 +107,112 @@
 
 .info div p:last-child {
   text-align: right;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: flex-start;
+}
+
+
+.item {
+  width: 31.3333%;
+  margin: 1%;
+}
+
+.item_img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.19);
+}
+
+.item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: -40px;
+  position: relative;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.19);
+}
+
+.info h2 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.item_btn_inner {
+  background: #FF5A5F;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: -40px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.19);
+}
+
+.item_btn_inner ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.item_btn_inner ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.item_btn_inner ul li:nth-child(2) {
+  float: right;
+}
+
+@keyframes bounce {
+  0%, 75%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*height: 100vh;*/
+}
+
+.spinner span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #FF5A5F;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+}
+
+.spinner span:nth-child(1) {
+  left: -40px;
+  animation: bounce 1s ease-in-out infinite;
+}
+.spinner span:nth-child(2) {
+  animation: bounce 1s ease-in-out 0.33s infinite;
+}
+.spinner span:nth-child(3) {
+  left: 40px;
+  animation: bounce 1s ease-in-out 0.66s infinite;
 }

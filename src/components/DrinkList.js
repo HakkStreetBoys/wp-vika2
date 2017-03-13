@@ -5,18 +5,34 @@ import axios from 'axios';
 class DrinkList extends Component {
   state = {
     drink: [],
+    loading: true,
   }
 
   componentWillMount() {
-    axios.get('http://localhost:3001/9gag')
-    .then(response => this.setState({ drink: response.data }))
+    axios.get('http://localhost:8888/repeat-menu/wp-json/wp/v2/menu?menu_cat=9')
+    .then(response => this.setState({
+      drink: response.data,
+      loading: false,
+    }))
     .catch(err => console.log(err));
+    console.log(this.state);
   }
 
   renderDrink() {
-    console.log(this.state);
+    // console.log(this.state);
+
+    if(this.state.loading) {
+      return (
+        <div className="spinner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      );
+    }
+
     return this.state.drink.map(drink =>
-      <Drink key={drink.title} drink={drink} />
+      <Drink key={drink.id} drink={drink} />
     );
   }
 
