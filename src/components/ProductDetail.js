@@ -15,7 +15,7 @@ const ProductDetail = ({ drink, onProductRemove }) => {
       </div>
       <div className="single_content">
         <h2>{drink.acf.menu_title}</h2>
-        {drink.acf.menu_description}
+        <p>{drink.acf.menu_description}</p>
       </div>
     </div>
   );

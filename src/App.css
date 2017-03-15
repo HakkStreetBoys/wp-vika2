@@ -1,3 +1,19 @@
+@font-face {
+ font-family: 'RoundLight';
+ src: url('./fonts/din-round/din-round-light.eot') format('embedded-opentype'),
+ url('./fonts/din-round/din-round-light.woff') format('woff'),
+ url('./fonts/din-round/din-round-light.ttf')  format('truetype');
+ font-weight: 300;
+}
+
+@font-face {
+ font-family: 'RoundBold';
+ src: url('./fonts/din-round/din-round-bold.eot') format('embedded-opentype'),
+ url('./fonts/din-round/din-round-bold.woff') format('woff'),
+ url('./fonts/din-round/din-round-bold.ttf')  format('truetype');
+ font-weight: 800;
+}
+
 /*.App {
   text-align: center;
 }*/
@@ -5,6 +21,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'RoundBold';
 }
 
 .App-logo {
@@ -128,6 +145,7 @@
 .item {
   width: 31.3333%;
   margin: 1%;
+  cursor: pointer;
 }
 
 .item_img {
@@ -157,6 +175,9 @@
 .info h2 {
   margin-top: 40px;
   margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: left;
+  font-size: 24px;
 }
 
 .item_btn_inner {
@@ -177,10 +198,12 @@
 .item_btn_inner ul li {
   display: inline-block;
   color: #fff;
+  font-size: 18px;
 }
 
 .item_btn_inner ul li:nth-child(2) {
   float: right;
+  font-size: 24px;
 }
 
 @keyframes bounce {
@@ -239,6 +262,7 @@
   right: 40px;
   font-size: 38px;
   z-index: 5;
+  cursor: pointer;
 }
 
 .single_image {
@@ -267,4 +291,14 @@
   border-radius: 10px;
   height: auto;
   min-height: 250px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.19);
+}
+
+.single_content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.single_content p {
+  font-family: 'RoundLight';
 }
