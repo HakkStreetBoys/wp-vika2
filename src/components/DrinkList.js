@@ -9,7 +9,7 @@ class DrinkList extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:8888/repeat-menu/wp-json/wp/v2/menu?menu_cat=9')
+    axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=9')
     .then(response => this.setState({
       drink: response.data,
       loading: false,
