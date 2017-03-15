@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Drink = ({ drink }) => {
-  const { menu_title, menu_image, menu_price, menu_description } = drink.acf;
+const Drink = ({ drink, onProductSelect }) => {
+  const { menu_title, menu_image, menu_price } = drink.acf;
   return (
-    <div className="item">
+    <div onClick={() => onProductSelect(drink)} className="item">
       <div className="item_img">
-        <img src={menu_image.url} alt="" />
+        <img src={menu_image.sizes.medium_large} alt="" />
       </div>
       <div className="info">
         <h2>{menu_title}</h2>
