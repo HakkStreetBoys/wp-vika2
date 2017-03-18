@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Food = ({ food }) => {
-  const { menu_title, menu_image, menu_price, menu_description } = food.acf;
+  const { menu_title, menu_image, menu_price } = food.acf;
   return (
     <div className="item">
       <div className="item_img">
