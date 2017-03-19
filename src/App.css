@@ -312,6 +312,27 @@ p {
 
 .single_content p {
   font-family: 'RoundLight';
+  font-size: 20px;
+}
+
+.single_content .tags {
+  margin-top: 40px;
+}
+
+.tags div {
+  border: 1px solid #343845;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 10px;
+}
+
+.tags li {
+  list-style-type: none;
+  color: #343845;
+  font-weight: 300;
+  font-size: 14px;
+  /*font-family: 'RoundLight';*/
 }
 
 

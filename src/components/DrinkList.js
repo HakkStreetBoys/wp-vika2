@@ -4,20 +4,20 @@ import axios from 'axios';
 import ProductDetail from './ProductDetail';
 
 class DrinkList extends Component {
-  state = {
-    drink: [],
-    loading: true,
-    selectedProduct: null,
-  }
+  // state = {
+  //   drink: [],
+  //   loading: true,
+  //   selectedProduct: null,
+  // }
 
-  // constructor(props) {
-  //       super(props);
-  //       this.state = {
-  //         drink: [],
-  //         loading: true,
-  //         selectedProduct: null,
-  //       };
-  //   }
+  constructor(props) {
+        super(props);
+        this.state = {
+          drink: [],
+          loading: true,
+          selectedProduct: null,
+        };
+    }
 
   componentWillMount() {
     axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=9')
