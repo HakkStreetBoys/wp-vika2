@@ -382,6 +382,10 @@ p {
 /*Screen sm*/
 @media screen and (max-width: 768px) {
 
+  .tabs__labels {
+    padding: 20px 0;
+  }
+
   .tabs__labels a {
     font-size: 24px;
     padding: 0 10px;
