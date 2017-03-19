@@ -2,16 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 const ProductDetail = ({ drink, onProductRemove }) => {
-  // const { menu_title, menu_image, menu_price } = drink.acf;
-
-  // renderTags() {
-  //   return drink.acf.menu_tag.map(menu_tag =>
-  //     <div>
-  //       <h1>HALLO</h1>
-  //     </div>
-  //   );
-  // }
-
 
   if(!drink) {
     return <span className="fleh"></span>;
@@ -27,15 +17,11 @@ const ProductDetail = ({ drink, onProductRemove }) => {
   let relatedItems;
   if (drink.acf.menu_related != null) {
     relatedItems = drink.acf.menu_related.map(menu_related =>
-      <div><li>{menu_related.post_title}</li></div>
+      <div className="related_item">
+        <h3>{menu_related.post_title}</h3>
+      </div>
     );
   }
-
-  // const tags = drink.acf.menu_tags.map(menu_tag =>
-  //     <ul>
-  //       <li>{menu_tag.name}</li>
-  //     </ul>
-  // );
 
   return (
     <div className="ovrlay">
@@ -54,9 +40,7 @@ const ProductDetail = ({ drink, onProductRemove }) => {
         </div>
 
         <div className="related_items">
-          <ul>
-            {relatedItems}
-          </ul>
+          {relatedItems}
         </div>
       </div>
     </div>

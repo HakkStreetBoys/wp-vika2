@@ -32,6 +32,10 @@ p {
   font-family: 'RoundLight';
 }
 
+li {
+  list-style-type: none;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -265,12 +269,13 @@ p {
   background: #F8F2F2;
   transition: .25s ease-in-out;
   z-index: 2;
+  overflow-y: auto;
 }
 
 .ovrlay .fa-close {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   font-size: 38px;
   z-index: 5;
   cursor: pointer;
@@ -278,7 +283,8 @@ p {
 
 .single_image {
   width: 100%;
-  height: 400px;
+  height: auto;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
 }
@@ -333,6 +339,31 @@ p {
   font-weight: 300;
   font-size: 14px;
   /*font-family: 'RoundLight';*/
+}
+
+.single_content .related_items {
+  margin-top: 40px;
+}
+
+.related_items .related_item {
+  background-image: url('http://139.59.168.247/repeat-menu/wp-content/uploads/2017/03/brio-300x200.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #10556A;
+  background-blend-mode: soft-light;
+  padding: 80px 0;
+  display: inline-block;
+  margin-right: 2%;
+  border-radius: 10px;
+  width: 20%;
+}
+
+.related_item h3 {
+  font-size: 24px;
+  font-family: 'RoundBold';
+  color: #fff;
+  text-align: center;
 }
 
 
@@ -398,6 +429,10 @@ p {
   .item {
     width: 48%;
   }
+
+  .single_image {
+    min-height: 300px;
+  }
 }
 
 /*Screen sm*/
@@ -416,6 +451,20 @@ p {
     width: 100%;
     margin: 1%;
     cursor: pointer;
+  }
+
+  .ovrlay .fa-close {
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+  }
+
+  .single_image {
+    min-height: 200px;
+  }
+
+  .related_items .related_item {
+    width: 31%;
   }
 
   .promo_offers .promo_bg {
