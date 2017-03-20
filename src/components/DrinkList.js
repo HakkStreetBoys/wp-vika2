@@ -20,11 +20,10 @@ class DrinkList extends Component {
   //   }
 
   componentWillMount() {
-    axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=9')
+    axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=9&per_page=30')
     .then(response => this.setState({
-      drink: response.data,
       loading: false,
-      // selectedProduct: response.data,
+      drink: response.data,
     }))
     .catch(err => console.log(err));
     console.log(this.state);

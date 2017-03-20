@@ -11,10 +11,10 @@ class FoodList extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=8')
+    axios.get('http://pebbleplates.com/repeat-menu/wp-json/wp/v2/menu?menu_cat=8&per_page=30')
     .then(response => this.setState({
-      food: response.data,
       loading: false,
+      food: response.data,
     }))
     .catch(err => console.log(err));
   }
