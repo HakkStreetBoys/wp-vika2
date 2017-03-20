@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Drink from './Drink';
 import axios from 'axios';
-import ProductDetail from './ProductDetail';
+import DrinkDetail from './DrinkDetail';
 
 class DrinkList extends Component {
   state = {
@@ -60,7 +60,7 @@ class DrinkList extends Component {
     console.log(this.state);
     return (
       <div className="gag">
-        <ProductDetail
+        <DrinkDetail
           drink={this.state.selectedProduct}
           onProductRemove={selectedProduct => this.setState({ selectedProduct: null })}
         />

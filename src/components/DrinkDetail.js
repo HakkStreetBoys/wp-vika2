@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const ProductDetail = ({ drink, onProductRemove }) => {
+const DrinkDetail = ({ drink, onProductRemove }) => {
 
   if(!drink) {
     return <span className="fleh"></span>;
@@ -47,4 +47,4 @@ const ProductDetail = ({ drink, onProductRemove }) => {
   );
 }
 
-export default ProductDetail;
+export default DrinkDetail;

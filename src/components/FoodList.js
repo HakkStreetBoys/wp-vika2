@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Food from './Food';
+import FoodDetail from './FoodDetail';
 import axios from 'axios';
 
 class FoodList extends Component {
   state = {
     food: [],
-    selectedProduct: null,
     loading: true,
+    selectedProduct: null,
   }
 
   componentWillMount() {
@@ -30,7 +31,10 @@ class FoodList extends Component {
     }
 
     return this.state.food.map(food =>
-      <Food onSelectProduct={selectedProduct => this.setState({selectedProduct})} key={food.id} food={food} />
+      <Food
+        onProductSelect={selectedProduct => this.setState({ selectedProduct })}
+        key={food.id}
+        food={food} />
     );
     // console.log(this.state);
   }
@@ -38,6 +42,10 @@ class FoodList extends Component {
   render() {
     return (
       <div className="gag">
+        <FoodDetail
+          food={this.state.selectedProduct}
+          onProductRemove={selectedProduct => this.setState({ selectedProduct: null })}
+        />
         <div className="wrapper">
           {this.renderFood()}
         </div>
